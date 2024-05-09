@@ -8,6 +8,9 @@ protected:
 
 
 public:
+
+    ArrayR(const ArrayR&) = delete;
+    ArrayR& operator=(const ArrayR&) = delete;
     ArrayR();
     ArrayR(int );
     ~ArrayR();

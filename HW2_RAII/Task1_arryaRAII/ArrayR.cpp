@@ -16,7 +16,7 @@ ArrayR::ArrayR(int arr_size) {
     };
 
   int ArrayR::get_element(int number) {
-        if (number > arr_size) {
+        if ((number<0) || (number > (arr_size - 1))||(number >(last-1))) {
             throw MyException("Не корректный индекс элемента.");
         }
         return arr[number];

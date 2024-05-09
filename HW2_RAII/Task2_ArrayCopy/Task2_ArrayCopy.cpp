@@ -13,14 +13,18 @@ int main()
         arr.add_element(4);
         arr.add_element(155);
 
-        ArrayR new_array(2);
+        ArrayR new_array(3);
         new_array.add_element(44);
         new_array.add_element(34);
 
         arr = new_array;
 
-        for (int i = 0; i < 2; i++) {
-            std::cout << arr.get_element(i) << " ";
+        arr.add_element(23);
+
+        ArrayR arr3(arr);
+
+        for (int i = 0; i < 3; i++) {
+            std::cout << arr3.get_element(i) << " ";
         }
 
     }

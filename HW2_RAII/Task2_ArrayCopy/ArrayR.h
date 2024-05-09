@@ -8,12 +8,13 @@ protected:
 
 
 public:
+
     ArrayR();
     ArrayR(int);
-    //ArrayR(const ArrayR&);
+    ArrayR(ArrayR&);
     ~ArrayR();
     void add_element(int value);
     int get_element(int number);
-    const ArrayR& operator= (const ArrayR& right);
+    ArrayR& operator= (const ArrayR& right);
     
 };

@@ -13,8 +13,8 @@ int main()
         arr.add_element(4);
         arr.add_element(155);
         arr.add_element(14);
-        arr.add_element(15);
-        std::cout << arr.get_element(2) << std::endl;
+        //arr.add_element(15);
+        std::cout << arr.get_element(4) << std::endl;
     }
     catch (const std::exception& ex) {
         std::cout << ex.what() << std::endl;
