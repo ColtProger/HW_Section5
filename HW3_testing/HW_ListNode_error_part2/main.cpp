@@ -101,19 +101,19 @@ private:
 TEST_CASE("List can be constructed") {
     List lst1;
     CHECK(lst1.Empty() == true);
-   
+
     //add some lements to list
     SECTION("Add and delete elements Back") {
 
-     lst1.PushBack(1.0);
-     lst1.PushBack(2.0);
-     lst1.PushBack(3.0);
-     lst1.PushBack(4.0);
-     CHECK(lst1.Size() == 4);
+        lst1.PushBack(1.0);
+        lst1.PushBack(2.0);
+        lst1.PushBack(3.0);
+        lst1.PushBack(4.0);
+        CHECK(lst1.Size() == 4);
 
-     lst1.PopBack();
-     CHECK(lst1.Size() == 3);
-     
+        lst1.PopBack();
+        CHECK(lst1.Size() == 3);
+
     };
 
     SECTION("Add and delete elements Front") {
@@ -128,20 +128,21 @@ TEST_CASE("List can be constructed") {
 
     };
 
- 
-  SECTION("Clear list") {
+
+    SECTION("Clear list") {
         lst1.Clear();
         CHECK(lst1.Empty() == true);
     };
 
 
     SECTION("Delete element Back from empty list") {
-        lst1.PopBack();
-        CHECK(lst1.Size() == 0);
+
+        REQUIRE_THROWS(lst1.PopBack());
     };
 
     SECTION("Delete element Front from empty list") {
-        lst1.PopFront();
-        CHECK(lst1.Size() == 0);
+
+        REQUIRE_THROWS(lst1.PopBack());
     };
 }
+
