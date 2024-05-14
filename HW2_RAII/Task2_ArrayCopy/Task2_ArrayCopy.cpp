@@ -11,19 +11,19 @@ int main()
         ArrayR arr(5);
         arr.add_element(1);
         arr.add_element(4);
-        arr.add_element(155);
+        //arr.add_element(155);
 
-        ArrayR new_array(3);
-        new_array.add_element(44);
-        new_array.add_element(34);
+        ArrayR new_array(5);
+       // new_array.add_element(44);
+        //new_array.add_element(34);
 
-        arr = new_array;
+       new_array=arr;
 
-        arr.add_element(23);
+       // arr.add_element(23);
 
         ArrayR arr3(arr);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             std::cout << arr3.get_element(i) << " ";
         }
 
