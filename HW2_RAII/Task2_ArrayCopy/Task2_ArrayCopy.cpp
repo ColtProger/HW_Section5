@@ -9,8 +9,8 @@ int main()
     setlocale(LC_ALL, "Russian");
     try {
         ArrayR arr(5);
-        arr.add_element(1);
-        arr.add_element(4);
+        arr.add_element(10);
+        arr.add_element(20);
         //arr.add_element(155);
 
         ArrayR new_array(5);
@@ -21,11 +21,13 @@ int main()
 
        // arr.add_element(23);
 
-        ArrayR arr3(arr);
+       // ArrayR arr3(arr);
 
-        for (int i = 0; i < 2; i++) {
-            std::cout << arr3.get_element(i) << " ";
-        }
+        std::cout << arr.get_element(1) << std::endl;
+
+       // for (int i = 0; i < 2; i++) {
+        //    std::cout << new_array.get_element(i) << " ";
+        //}
 
     }
     catch (const std::exception& ex) {
