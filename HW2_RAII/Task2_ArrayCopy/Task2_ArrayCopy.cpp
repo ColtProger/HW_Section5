@@ -23,7 +23,7 @@ int main()
 
        // ArrayR arr3(arr);
 
-        std::cout << arr.get_element(1) << std::endl;
+        std::cout << new_array.get_element(1) << std::endl;
 
        // for (int i = 0; i < 2; i++) {
         //    std::cout << new_array.get_element(i) << " ";

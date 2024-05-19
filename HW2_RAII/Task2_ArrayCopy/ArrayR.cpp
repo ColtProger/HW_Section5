@@ -40,13 +40,12 @@ int ArrayR::get_element(int number) {
 {
      if (this == &right)                 //если самоприсваивание
          return *this;
-     if (arr_size != right.arr_size)
-        {
-            delete[] arr; // освободить пространство
-            arr_size = right.arr_size; // установить нужный размер массива
-            last = right.last;
-            arr = new int[arr_size]; // выделить память под копируемый массив
-        }
+    
+     delete[] arr; // освободить пространство
+     arr_size = right.arr_size; // установить нужный размер массива
+     last = right.last;
+     arr = new int[arr_size]; // выделить память под копируемый массив
+        
 
         for (int i = 0; i < arr_size; i++)
             arr[i] = right.arr[i]; // скопировать массив
