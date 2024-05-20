@@ -23,7 +23,7 @@ public:
         }; 
     }
     ~Array2d() {
-        
+        std::cout << __FUNCTION__ << std::endl;
         for (int i = 0; i < size_rows; i++) {
             delete elements[i];
         }
