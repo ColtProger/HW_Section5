@@ -9,6 +9,8 @@ BigNumber::BigNumber(std::string aValue) {
             isNegative = true;
             start = 1;
         }
+        if (first == '0')
+            throw std::runtime_error(aValue + " it's not a number!");
         for (int i = size; i >= start; i--) {
             digits.push_back(std::atoi(aValue.substr(i, 1).c_str()));
         }
