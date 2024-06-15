@@ -36,7 +36,7 @@ void IniParser::parseFromFile(const std::string& filename) {
                 if (section.empty()) {
                     throw std::runtime_error("Empty section name encountered.");
                 }
-                std::cout << section << std::endl;
+                //std::cout << section << std::endl;
 
                 continue;
             }
@@ -44,7 +44,7 @@ void IniParser::parseFromFile(const std::string& filename) {
 
             key = line.substr(0, pos);
             value = line.substr(pos + 1, line.length());
-            std::cout << key << " " << value << std::endl;
+            //std::cout << key << " " << value << std::endl;
 
 
         }
